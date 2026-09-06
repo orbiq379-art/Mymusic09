@@ -17,6 +17,13 @@ android.archs = arm64-v8a
 android.api = 35
 android.minapi = 23
 
+# Accept SDK licenses non-interactively in CI (required for automated builds).
+android.accept_sdk_license = True
+
+# Don't let Buildozer silently pull whatever build-tools/platform version
+# happens to be newest on a given run; use exactly what the workflow installs.
+android.skip_update = True
+
 [buildozer]
 log_level = 2
 warn_on_root = 1
